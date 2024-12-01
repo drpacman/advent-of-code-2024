@@ -1,0 +1,27 @@
+p←⍉↑⍎¨⊃⎕NGET'input'1
+
+Step by step:
+⎕NGET'input'1 - get the contents of the file 'input'
+⊃ - pick the contents of the file
+⍎¨ - evaluate each element of the array (turn them into a pair of numbers)
+⍉↑ - transpose the resulting array and convert it to a matrix of two rows
+
++/|-⌿{⍵[⍋⍵]}⍤1⊢p ⍝ part1
+
+Step by step:
+⍤1⊢p - iterate over the first axis of the array p
+{⍵[⍋⍵]} - sort the array
+-⌿ - subtract the first row from the last row, giving us the difference between the two
++/ - sum the resulting list of differences
+
++/,{⍵×+/⍵=1⌷p}¨⍪0⌷p ⍝ part2
+
+Step by step:
+¨⍪0⌷p - Apply the function over each item in the first column 
+in the array
+
+⍵×+/⍵=1⌷p - Create a binary array (0 1 1 0 etc) of 
+the entries in the second column which match the value we are looking for, sum those up and multiply
+by the searched for value
+
++/, - sum the resulting list of results
