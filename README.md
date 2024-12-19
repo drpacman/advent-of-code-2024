@@ -2,6 +2,11 @@ Learn some Dyalog APL...
 
 Examples executed with Dyalog RIDE IDE
 
+# Commands 
+]file.Edit 'day1.dyalog' - edit the file
+]LINK.Create # <dirname> - create a link between default namespace and a directory
+]box on -f=on - turn on rich box display including in functions
+
 # Useful Links
 * [RIDE user manual](https://docs.dyalog.com/17.0/RIDE%20User%20Guide.pdf)
 * [Learn APL](https://xpqz.github.io/learnapl/) - a book/tutorial
