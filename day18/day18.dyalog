@@ -1,6 +1,6 @@
 n←(0 1)(0 ¯1)(1 0)(¯1 0)
-max file steps←6 'input_test' 12
-max file steps←70 'input' 1024
+⍝ max file steps←6 'input_test' 12
+max file steps←70 'input' 1024 
 moves←⍎¨¨'\d+'⎕S'&'¨⊃⎕NGET file 1
 prep←{ '#'@(⊂¨⍵↑moves)⊢0@(⊂0 0)⊢(1+(2⍴max))⍴'.' }
 
