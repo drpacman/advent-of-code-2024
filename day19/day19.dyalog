@@ -1,5 +1,5 @@
-ts←x⊆⍨','≠x←' '⎕R''⊃⊃⎕NGET'input_test'1
-xs←2↓⊃⎕NGET'input_test'1
+ts←x⊆⍨','≠x←' '⎕R''⊃⊃⎕NGET'input'1
+xs←2↓⊃⎕NGET'input'1
 solve←{ 
     x←∪⊃,/{ 
         n←⍵ 
@@ -11,3 +11,20 @@ solve←{
 }
 
  +/solve¨⊂¨xs ⍝ Part 1
+
+solve←{
+     ⍺←0
+     n←⊃+/{(2⊃⍵)×0=≢(⊃⍵)}¨⍵
+     d←⊃,/{
+         m n←⍵
+         {(⊂(≢⍵)↓m),n}¨ts/⍨{1≡⊃⍵⍷m}¨ts
+     }¨⍵
+     0≡≢d:⊃(⍺+n)
+     x←{
+         1=≢⍵:⍵ 
+         ↓,¨(⊃¨⍵){⍺,+/⍵}⌸(2⊃¨⍵)
+     } d
+     0∊≢¨x:1
+     (⍺+n)∇x
+}
+ +/solve¨⊂{(⊂⍵),1}¨xs ⍝ Part 2
