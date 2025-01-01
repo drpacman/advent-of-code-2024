@@ -27,10 +27,14 @@ some solutions of AoC from 2023 by domain experts
 * [Expert level solutions to learn from](https://github.com/pitr/aoc/tree/main/2024)
 
 # Notes
-- Reduce (/) consumes from right to left of the input e.g. 
+* Reduce (/) consumes from right to left of the input e.g. 
 ```
 {⎕←⍺ ⍵ ⋄ ⍺+⍵}/⍳3
 2 3
 1 5
 6
 ```
+* Monadic ≠ creates a mask of the first occurance of each unqiue value in an array
+* n{f}/m will create an n window application of f over m e.g.
+  ```m←1 2 3
+     2+/m``` prints out 3 5 
