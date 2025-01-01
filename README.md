@@ -3,9 +3,13 @@ Learn some Dyalog APL...
 Examples executed with Dyalog RIDE IDE
 
 # Commands 
-]file.Edit 'day1.dyalog' - edit the file
-]LINK.Create # <dirname> - create a link between default namespace and a directory
-]box on -f=on - turn on rich box display including in functions
+* ```]file.Edit 'day1.dyalog'``` - edit the file
+* ```]LINK.Create # <dirname>``` - create a link between default namespace and a directory
+* ```]box on -f=on``` - turn on rich box display including in functions
+* ```⎕PP←nnn``` - set precision for display to nnn decimal places
+* ```⎕PW←nnn``` - set line length for display to nnn chars
+
+Set the environment variable MAXWS before launching to change the max workspace size, e.g. ```MAXWS=4G```
 
 # Useful Links
 * [RIDE user manual](https://docs.dyalog.com/17.0/RIDE%20User%20Guide.pdf)
