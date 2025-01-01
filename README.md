@@ -36,5 +36,8 @@ some solutions of AoC from 2023 by domain experts
 ```
 * Monadic ≠ creates a mask of the first occurance of each unqiue value in an array
 * n{f}/m will create an n window application of f over m e.g.
-  ```m←1 2 3
-     2+/m``` prints out 3 5 
+  ```
+  m←1 2 3
+  2+/m
+  ```
+  prints out ```3 5``` 
