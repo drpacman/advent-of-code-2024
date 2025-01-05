@@ -42,11 +42,10 @@ E3←3⊃¨G/⍨{a X b c←⍵ ⋄ (X≡'XOR')∧('x'≠⊃a)∧('z'≠⊃c)}¨G
 E4←m/⍨0<≢¨m←{a X b c←⍵ ⋄ t←3⊃¨A_XOR_B ⋄ (X≡'OR')∧((⊂a)∊t):a ⋄ (X≡'OR')∧((⊂b)∊t):b ⋄ ⍬}¨G
 ⍝ No AND outputs should appear in XOR statements apart from the first
 E5←m/⍨0<≢¨m←{a X b c←⍵ ⋄ t←3⊃¨A_AND_B/⍨{⊂'x00'≢⊃⍵}¨A_AND_B ⋄ (X≡'XOR')∧((⊂a)∊t):a ⋄ (X≡'XOR')∧((⊂b)∊t):b ⋄ ⍬}¨G
-
+E←E1,E2,E3,E4,E5
 ⎕←⊃{⍺,',',⍵}/E[⍋E] ⍝ Part 2
 
 ⍝ qrh swap with z38
 ⍝ jmq swap with z06
 ⍝ gmh swap with z13
 ⍝ cbd swap with rqf
-
